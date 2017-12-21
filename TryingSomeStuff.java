@@ -324,7 +324,37 @@ public class trace_class3 {
 			
 			moving[j]-=1;
 			}//me soldier
+				else if(enemyai[j].equals("patrolr"){
+				enemyx+=4;
+				if(enemyx>=550)
+					enemyai[j] = "patroll";		
+				for(int i = 0; i<rectx.length; i++){
+					if(enemyx[j]+50>rectx[i]&&enemyy[j]+50>recty[i]&&rectx[i]+rectw[i]>enemyx[j]&&recty[i]+recth[i]>enemyy[j]){
+						enemyai[j] = "patroll"
+						i = rectx.length;
+					}
+				}
+				}//patrolr bracket
+					else if(enemyai[j].equals("patroll"){
+				enemyx-=4;
+				if(enemyx<=0)
+					enemyai[j] = "patrolr";		
+				for(int i = 0; i<rectx.length; i++){
+					if(enemyx[j]+50>rectx[i]&&enemyy[j]+50>recty[i]&&rectx[i]+rectw[i]>enemyx[j]&&recty[i]+recth[i]>enemyy[j]){
+						enemyai[j] = "patrolr"
+						i = rectx.length;
+					}
+				}
+				}//patroll bracket
+					
 			}//all enemies for loop
+			
+			for(int j = 0; j<enemyx.length; i++){
+			if(enemyx[j]+50>rectx[i]&&enemyy[j]+50>recty[i]&&rectx[i]+rectw[i]>enemyx[j]&&recty[i]+recth[i]>enemyy[j]&&owch<=0){
+				owch=15;
+				lives -= 1;
+				}
+			}
 			
 			for(int i =0; i<enemybx.length;i++){
 				if(enemybx[i]+10>x&&enemyby[i]+10>y&&x+50>enemybx[i]&&y+50>enemyby[i]&&owch<=0){
@@ -371,12 +401,12 @@ public class trace_class3 {
 					bulletx[i] = -15;
 				}
         
-                int tempdelete[] = new int[0];
-                enemybx = tempdelete;
-                enemyby = tempdelete;
-                bspdx = tempdelete;
-                bspdy = tempdelete;
-                ebdead = tempdelete;
+           		     int tempdelete[] = new int[0];
+				enemybx = tempdelete;
+				enemyby = tempdelete;
+				bspdx = tempdelete;
+				bspdy = tempdelete;
+				ebdead = tempdelete;
 				
 				int temprectx[] = new int[1];
 				temprectx[0]=100;
@@ -419,6 +449,12 @@ public class trace_class3 {
 					bulletdead[i] = 0;
 					bulletx[i] = -15;
 				}
+				     int tempdelete[] = new int[0];
+				enemybx = tempdelete;
+				enemyby = tempdelete;
+				bspdx = tempdelete;
+				bspdy = tempdelete;
+				ebdead = tempdelete;
 				
 				int temprectx[] = new int[5];
 				temprectx[0]=100;
@@ -523,6 +559,12 @@ public class trace_class3 {
 					bulletdead[i] = 0;
 					bulletx[i] = -15;
 				}
+				     int tempdelete[] = new int[0];
+				enemybx = tempdelete;
+				enemyby = tempdelete;
+				bspdx = tempdelete;
+				bspdy = tempdelete;
+				ebdead = tempdelete;
 				
 				int temprectx[] = new int[3];
 				temprectx[0]=200;
