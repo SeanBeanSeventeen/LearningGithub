@@ -682,5 +682,6 @@ public class trace_class3 {
 			Thread.sleep(30);
 		}//main big important while loop bracket
 		//c.print(false);
+						//Sup
 	}
 }
